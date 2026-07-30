@@ -427,15 +427,25 @@
     border-radius:10px;
     padding:34px 36px;
     text-align:left;
+    display:flex;
+    flex-direction:column;
+    gap:16px;
+    height:min(80vh, 860px);
+    max-height:min(80vh, 860px);
+    overflow:hidden;
   }
   .letter-card .to{
-    font-style:italic; color:var(--blush); margin-bottom:14px; display:block;
+    font-style:italic; color:var(--blush); margin-bottom:0; display:block;
   }
   #letterText{
-    width:100%; min-height:180px; resize:vertical;
+    width:100%; flex:1 1 auto; min-height:0;
+    overflow-y:auto; padding-right:8px;
     background:transparent; border:none; outline:none;
     font-family:'Cormorant Garamond', serif; font-size:21px; line-height:1.7;
     color: var(--paper); font-style:italic;
+  }
+  .letter-card .sign{
+    flex:none;
   }
   #letterText:focus{
     background: rgba(255,255,255,0.35); border-radius:6px;
